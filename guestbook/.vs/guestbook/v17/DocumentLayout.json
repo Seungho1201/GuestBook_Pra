@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\drawline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|solutionrelative:drawline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\drawline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|solutionrelative:drawline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\guestbook.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|solutionrelative:guestbook.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|solutionrelative:Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\guestbook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|solutionrelative:guestbook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\Pen_Str.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|solutionrelative:Pen_Str.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24853797-C485-4825-956B-D3BE86BC9A01}|guestbook.vcxproj|solutionrelative:framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 444,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Resource.h",
+              "DocumentMoniker": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\Resource.h",
+              "RelativeDocumentMoniker": "Resource.h",
+              "ToolTip": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\Resource.h",
+              "RelativeToolTip": "Resource.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-05T11:54:45.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "framework.h",
+              "DocumentMoniker": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\framework.h",
+              "RelativeDocumentMoniker": "framework.h",
+              "ToolTip": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\framework.h",
+              "RelativeToolTip": "framework.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-05T11:51:27.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "drawline.cpp",
+              "DocumentMoniker": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\drawline.cpp",
+              "RelativeDocumentMoniker": "drawline.cpp",
+              "ToolTip": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\drawline.cpp",
+              "RelativeToolTip": "drawline.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-05T11:50:18.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "drawline.h",
+              "DocumentMoniker": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\drawline.h",
+              "RelativeDocumentMoniker": "drawline.h",
+              "ToolTip": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\drawline.h",
+              "RelativeToolTip": "drawline.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-05T11:50:07.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "guestbook.h",
+              "DocumentMoniker": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\guestbook.h",
+              "RelativeDocumentMoniker": "guestbook.h",
+              "ToolTip": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\guestbook.h",
+              "RelativeToolTip": "guestbook.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-05T11:38:49.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Pen_Str.h",
+              "DocumentMoniker": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\Pen_Str.h",
+              "RelativeDocumentMoniker": "Pen_Str.h",
+              "ToolTip": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\Pen_Str.h",
+              "RelativeToolTip": "Pen_Str.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACAAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-05T11:38:28.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "guestbook.cpp",
               "DocumentMoniker": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\guestbook.cpp",
               "RelativeDocumentMoniker": "guestbook.cpp",
               "ToolTip": "C:\\Users\\ohseu\\Desktop\\GuestBook_Pra\\guestbook\\guestbook.cpp",
               "RelativeToolTip": "guestbook.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAwAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-05T11:34:24.308Z",
               "EditorCaption": ""
