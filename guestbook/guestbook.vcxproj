@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="drawline.h" />
+    <ClInclude Include="erase.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="guestbook.h" />
     <ClInclude Include="Pen_Str.h" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="drawline.cpp" />
+    <ClCompile Include="erase.cpp" />
     <ClCompile Include="guestbook.cpp" />
   </ItemGroup>
   <ItemGroup>
