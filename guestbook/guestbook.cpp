@@ -123,7 +123,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 
 
-HWND g_Hwnd;
+extern HWND g_Hwnd;
 
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -148,6 +148,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             (HINSTANCE)GetWindowLongPtr(g_Hwnd, GWLP_HINSTANCE), // 인스턴스 핸들
             NULL               // 추가 매개변수
         );
+        CreateWindow(
+            L"BUTTON",         // 버튼 클래스 이름
+            L"REPLAY",       // 버튼 텍스트
+            WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, // 버튼 스타일
+            10,                // 버튼의 x 위치
+            50,                // 버튼의 y 위치
+            100,               // 버튼의 폭
+            30,                // 버튼의 높이
+            g_Hwnd,              // 부모 윈도우 핸들
+            (HMENU)REPLAY,          // 버튼의 ID
+            (HINSTANCE)GetWindowLongPtr(g_Hwnd, GWLP_HINSTANCE), // 인스턴스 핸들
+            NULL               // 추가 매개변수
+        );
 
 
     // 버튼 클릭시 해당 수행 동작 정의
@@ -162,6 +175,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             case ERASE:
                 erase(g_Hwnd);
                 break;
+
+            // 리플레이 기능 (스레드로 변환 예정)
+            case REPLAY:
+                replay(g_Hwnd);
+                break;
+
             case IDM_ABOUT:
                 DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
                 break;

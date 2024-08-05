@@ -132,6 +132,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="guestbook.h" />
     <ClInclude Include="Pen_Str.h" />
+    <ClInclude Include="replay.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -139,6 +140,7 @@
     <ClCompile Include="drawline.cpp" />
     <ClCompile Include="erase.cpp" />
     <ClCompile Include="guestbook.cpp" />
+    <ClCompile Include="replay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="guestbook.rc" />

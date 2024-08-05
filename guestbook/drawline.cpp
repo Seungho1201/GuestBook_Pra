@@ -5,7 +5,7 @@
 // 전역변수 정의
 vector<PEN_INFO> test;
 PEN_INFO g_Pen_Info;
-
+HWND g_Hwnd;
 
 /**
  * @brief       그리기 함수 추후 색, 굵기 기능 추가 예정
