@@ -5,6 +5,7 @@
 #include "drawline.h"
 #include "erase.h"
 #include "replay.h"
+#include "button.h"
 
 #define ERASE 1000
 #define REPLAY 2000

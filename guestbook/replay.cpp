@@ -1,4 +1,6 @@
 #include <iostream>
+// 64비트 시간을 사용하기 위해 헤더 파일 사용
+#include <windows.h>
 #include "framework.h"
 #include "Pen_Str.h"
 
@@ -9,9 +11,12 @@ void replay(HWND g_Hwnd)
     hdc = GetDC(g_Hwnd);
     int x, y;
     HPEN myP, osP;
-
-    myP = CreatePen(PS_SOLID, 10, RGB(255, 255, 255));
-    osP = (HPEN)SelectObject(hdc, myP);
+    
+    // 요청이 바로 처리되지 않고 메세지 큐에 저장 즉 모든 작업이 끝난 후 실행
+    InvalidateRect(g_Hwnd, NULL, TRUE);
+    // 즉시 업데이트 요청을 보내어 모든 작업이 끝나고 실행되는 InvalidateRect 함수를 즉시 호출
+    UpdateWindow(g_Hwnd); 
+    
 
     for (size_t i = 0; i < (int)test.size(); i++)
     {
@@ -22,7 +27,7 @@ void replay(HWND g_Hwnd)
             y = HIWORD(test[i].Coordinate);
 
             MoveToEx(hdc, x, y, NULL);
-            LineTo(hdc, x, y + 1);  //점찍기
+            LineTo(hdc, x, y);  //점찍기
             break;
 
         case WM_MOUSEMOVE:
@@ -37,35 +42,10 @@ void replay(HWND g_Hwnd)
             break;
         }
 
-    }
-
-    SelectObject(hdc, osP);
-
-    for (size_t i = 0; i < (int)test.size(); i++)
-    {
-        switch (test[i].State)
+        if (i + 1 < test.size() && test[i + 1].State == WM_MOUSEMOVE)
         {
-        case WM_LBUTTONDOWN:
-            x = LOWORD(test[i].Coordinate);
-            y = HIWORD(test[i].Coordinate);
-
-            MoveToEx(hdc, x, y, NULL);
-            LineTo(hdc, x, y + 1);  //점찍기
-            break;
-
-        case WM_MOUSEMOVE:
-            LineTo(hdc, LOWORD(test[i].Coordinate), HIWORD(test[i].Coordinate));
-            break;
-
-        case WM_LBUTTONUP:
-            LineTo(hdc, LOWORD(test[i].Coordinate), HIWORD(test[i].Coordinate));
-            break;
-
-        default:
-            break;
+            Sleep(test[i + 1].Time - test[i].Time);
         }
-
-        Sleep(1);
     }
 
     ReleaseDC(g_Hwnd, hdc);

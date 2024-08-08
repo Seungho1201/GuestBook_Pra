@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="button.h" />
     <ClInclude Include="drawline.h" />
     <ClInclude Include="erase.h" />
     <ClInclude Include="framework.h" />
@@ -137,6 +138,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="button.cpp" />
     <ClCompile Include="drawline.cpp" />
     <ClCompile Include="erase.cpp" />
     <ClCompile Include="guestbook.cpp" />

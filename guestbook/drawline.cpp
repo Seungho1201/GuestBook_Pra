@@ -35,7 +35,7 @@ void drawLine(HWND hWnd, UINT message, LPARAM lParam)
         g_Pen_Info.Coordinate = lParam;     // 좌표값 저장
         // g_Pen_Info.Width =
         // g_Pen_Info.color =
-        // g_Pen_Info.Time =
+        g_Pen_Info.Time = (DWORD)GetTickCount64();
         g_Pen_Info.State = message;
 
         // 벡터 구조체에 윗 자료를 저장하는 변수 추가 예정
@@ -54,7 +54,7 @@ void drawLine(HWND hWnd, UINT message, LPARAM lParam)
             g_Pen_Info.Coordinate = lParam;     // 좌표값 저장
             // g_Pen_Info.Width =
             // g_Pen_Info.color =
-            // g_Pen_Info.Time =
+            g_Pen_Info.Time = (DWORD)GetTickCount64();
             g_Pen_Info.State = message;
             // 벡터 구조체에 윗 자료를 저장하는 변수 추가 예정
             test.push_back(g_Pen_Info);
@@ -67,7 +67,7 @@ void drawLine(HWND hWnd, UINT message, LPARAM lParam)
             g_Pen_Info.Coordinate = lParam;     // 좌표값 저장
             // g_Pen_Info.Width =
             // g_Pen_Info.color =
-            // g_Pen_Info.Time =
+            g_Pen_Info.Time = (DWORD)GetTickCount64();
             g_Pen_Info.State = message;
             // 벡터 구조체에 윗 자료를 저장하는 변수 추가 예정
             test.push_back(g_Pen_Info);

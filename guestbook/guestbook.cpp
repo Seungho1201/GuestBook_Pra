@@ -122,9 +122,11 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 //
 
-
 extern HWND g_Hwnd;
 
+// 버튼 생성자 선언 (switch 내부에 구현시 case 레이블에 의해 생략 되므로 전역변수로 선언)
+Button bt_Clear(10, 10, 100, 30, ERASE, L"ERASE");
+Button bt_Replay(10, 50, 100, 30, REPLAY, L"REPLAY");
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -134,34 +136,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         // hWnd 전역변수 저장
         g_Hwnd = hWnd;
 
-        // 버튼 생성
-        CreateWindow(
-            L"BUTTON",         // 버튼 클래스 이름
-            L"CLEAR",       // 버튼 텍스트
-            WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, // 버튼 스타일
-            10,                // 버튼의 x 위치
-            10,                // 버튼의 y 위치
-            100,               // 버튼의 폭
-            30,                // 버튼의 높이
-            g_Hwnd,              // 부모 윈도우 핸들
-            (HMENU)ERASE,          // 버튼의 ID
-            (HINSTANCE)GetWindowLongPtr(g_Hwnd, GWLP_HINSTANCE), // 인스턴스 핸들
-            NULL               // 추가 매개변수
-        );
-        CreateWindow(
-            L"BUTTON",         // 버튼 클래스 이름
-            L"REPLAY",       // 버튼 텍스트
-            WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, // 버튼 스타일
-            10,                // 버튼의 x 위치
-            50,                // 버튼의 y 위치
-            100,               // 버튼의 폭
-            30,                // 버튼의 높이
-            g_Hwnd,              // 부모 윈도우 핸들
-            (HMENU)REPLAY,          // 버튼의 ID
-            (HINSTANCE)GetWindowLongPtr(g_Hwnd, GWLP_HINSTANCE), // 인스턴스 핸들
-            NULL               // 추가 매개변수
-        );
-
+        // 버튼 구현
+        bt_Clear.mkButton(g_Hwnd);
+        bt_Replay.mkButton(g_Hwnd);
 
     // 버튼 클릭시 해당 수행 동작 정의
     case WM_COMMAND:
@@ -170,7 +147,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             // 메뉴 선택을 구문 분석합니다:
             switch (wmId)
             {
-
             // 지우기 기능
             case ERASE:
                 erase(g_Hwnd);
@@ -203,6 +179,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
+
     case WM_MOUSEMOVE:
 
     case WM_LBUTTONDOWN:

@@ -20,7 +20,7 @@ typedef struct Pen_Info
     LPARAM      Coordinate;     // ÁÂÇ¥
     int         Width;          // Ææ ±½±â
     COLORREF    Color;          // Ææ »ö±ò
-    __int64     Time;           // ½Ã°£
+    DWORD       Time;           // ½Ã°£
     UINT        State;          // »óÅÂ (LBUTTON)
 } PEN_INFO;
 
