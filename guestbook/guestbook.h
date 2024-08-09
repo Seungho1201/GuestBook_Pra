@@ -7,5 +7,7 @@
 #include "replay.h"
 #include "button.h"
 
-#define ERASE 1000
-#define REPLAY 2000
+#define ERASE   1000
+#define REPLAY  2000
+#define SAVE    3000
+#define LOAD    4000

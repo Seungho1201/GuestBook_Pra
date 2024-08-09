@@ -127,6 +127,8 @@ extern HWND g_Hwnd;
 // 버튼 생성자 선언 (switch 내부에 구현시 case 레이블에 의해 생략 되므로 전역변수로 선언)
 Button bt_Clear(10, 10, 100, 30, ERASE, L"ERASE");
 Button bt_Replay(10, 50, 100, 30, REPLAY, L"REPLAY");
+Button bt_Play(130, 10, 100, 30, SAVE, L"SAVE");
+Button bt_Load(130, 50, 100, 30, LOAD, L"LOAD");
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -139,6 +141,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         // 버튼 구현
         bt_Clear.mkButton(g_Hwnd);
         bt_Replay.mkButton(g_Hwnd);
+        bt_Play.mkButton(g_Hwnd);
+        bt_Load.mkButton(g_Hwnd);
 
     // 버튼 클릭시 해당 수행 동작 정의
     case WM_COMMAND:
