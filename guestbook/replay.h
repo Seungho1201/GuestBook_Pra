@@ -1,2 +1,2 @@
 #pragma once
-void replay(HWND g_Hwnd);
+DWORD WINAPI replay(LPVOID points);

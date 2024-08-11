@@ -22,6 +22,7 @@ typedef struct Pen_Info
     COLORREF    Color;          // Ææ »ö±ò
     DWORD       Time;           // ½Ã°£
     UINT        State;          // »óÅÂ (LBUTTON)
+    
 } PEN_INFO;
 
 /**
@@ -31,4 +32,23 @@ typedef struct Pen_Info
 
 extern vector<PEN_INFO> test;      // º¤ÅÍ º¯¼ö ¼±¾ð
 extern PEN_INFO g_Pen_Info;
+
+extern int pen_Width;
+extern COLORREF pen_Color;
+
+#define ERASE   1000
+#define REPLAY  2000
+#define SAVE    3000
+#define LOAD    4000
+
+#define W_UP    5000
+#define W_DOWN  6000
+
+#define C_RED   7000
+#define C_GREEN 8000
+#define C_BLUE  9000
+#define C_BLACK 10000
+
+
+
 

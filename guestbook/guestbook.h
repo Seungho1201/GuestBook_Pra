@@ -6,8 +6,6 @@
 #include "erase.h"
 #include "replay.h"
 #include "button.h"
+#include "w_control.h"
+#include "c_control.h"
 
-#define ERASE   1000
-#define REPLAY  2000
-#define SAVE    3000
-#define LOAD    4000

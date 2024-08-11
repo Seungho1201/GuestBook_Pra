@@ -55,8 +55,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     return (int) msg.wParam;
 }
 
-
-
 //
 //  함수: MyRegisterClass()
 //
@@ -121,14 +119,25 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
+// 
+// 전체 그림을 유지하고 텍스트 영역만 무효화합니다.
 
 extern HWND g_Hwnd;
+
 
 // 버튼 생성자 선언 (switch 내부에 구현시 case 레이블에 의해 생략 되므로 전역변수로 선언)
 Button bt_Clear(10, 10, 100, 30, ERASE, L"ERASE");
 Button bt_Replay(10, 50, 100, 30, REPLAY, L"REPLAY");
-Button bt_Play(130, 10, 100, 30, SAVE, L"SAVE");
+
+Button bt_SAVE(130, 10, 100, 30, SAVE, L"SAVE");
 Button bt_Load(130, 50, 100, 30, LOAD, L"LOAD");
+
+Button bt_Widthup(275, 10, 30, 30, W_DOWN, L"-");
+Button bt_Widthdown(350, 10, 30, 30, W_UP, L"+");
+
+Button bt_ColorRed(425, 10, 30, 30, C_RED, L"R");
+Button bt_ColorGreen(475, 10, 30, 30, C_GREEN, L"G");
+Button bt_ColorBlue(525, 10, 30, 30, C_BLUE, L"B");
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -141,8 +150,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         // 버튼 구현
         bt_Clear.mkButton(g_Hwnd);
         bt_Replay.mkButton(g_Hwnd);
-        bt_Play.mkButton(g_Hwnd);
+
+        bt_SAVE.mkButton(g_Hwnd);
         bt_Load.mkButton(g_Hwnd);
+
+        bt_Widthup.mkButton(g_Hwnd);
+        bt_Widthdown.mkButton(g_Hwnd);
+
+        bt_ColorRed.mkButton(g_Hwnd);
+        bt_ColorGreen.mkButton(g_Hwnd);
+        bt_ColorBlue.mkButton(g_Hwnd);
 
     // 버튼 클릭시 해당 수행 동작 정의
     case WM_COMMAND:
@@ -158,7 +175,26 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             // 리플레이 기능 (스레드로 변환 예정)
             case REPLAY:
-                replay(g_Hwnd);
+                // 리플레이 기능은 스레드화
+                CreateThread(NULL, 0, replay, (LPVOID)lParam, 0, NULL);
+                break;
+
+            // 펜 굵기 관련
+            case W_DOWN:
+                w_Control(g_Hwnd, W_DOWN);
+                break;
+            case W_UP:
+                w_Control(g_Hwnd, W_UP);
+                break;
+
+            case C_RED:
+                Change_Color(C_RED);
+                break;
+            case C_GREEN:
+                Change_Color(C_GREEN);
+                break;
+            case C_BLUE:
+                Change_Color(C_BLUE);
                 break;
 
             case IDM_ABOUT:
@@ -176,22 +212,29 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+            // 사각형 그리기 (그리기 영역)
+            Rectangle(hdc, 10, 100, 1000, 500);
+
+            // 펜 굵기 출력
+            WCHAR szPenWidth[10];
+            wsprintf(szPenWidth, L"%d", pen_Width); // 펜 굵기를 문자열로 변환
+            TextOut(hdc, 320, 15, szPenWidth, lstrlen(szPenWidth)); // 위치 (310, 15)에 출력
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
         break;
+
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
 
     case WM_MOUSEMOVE:
-
     case WM_LBUTTONDOWN:
-
     case WM_LBUTTONUP:
         // 그리기 함수
         drawLine(hWnd, message, lParam);
         break;
+
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
     }

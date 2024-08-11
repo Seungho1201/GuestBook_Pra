@@ -128,21 +128,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="button.h" />
+    <ClInclude Include="c_control.h" />
     <ClInclude Include="drawline.h" />
     <ClInclude Include="erase.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="global_value.h" />
     <ClInclude Include="guestbook.h" />
     <ClInclude Include="Pen_Str.h" />
     <ClInclude Include="replay.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="w_control.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="button.cpp" />
+    <ClCompile Include="c_control.cpp" />
     <ClCompile Include="drawline.cpp" />
     <ClCompile Include="erase.cpp" />
+    <ClCompile Include="global_value.cpp" />
     <ClCompile Include="guestbook.cpp" />
     <ClCompile Include="replay.cpp" />
+    <ClCompile Include="w_control.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="guestbook.rc" />
